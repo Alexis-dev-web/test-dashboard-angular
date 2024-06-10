@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col">
+    <p class="title-performance">Transit time</p>
+    <span class="subtitle">Number of annual orders delivered on time</span>
+  </div>
+</div>
+<div id="chart" style="height: 70% !important">
+  <apx-chart
+    [series]="chartOptions.series!"
+    [chart]="chartOptions.chart!"
+    [yaxis]="chartOptions.yaxis!"
+    [xaxis]="chartOptions.xaxis!"
+    [labels]="chartOptions.labels!"
+    [stroke]="chartOptions.stroke!"
+    [title]="chartOptions.title!"
+    [dataLabels]="chartOptions.dataLabels"
+    [fill]="chartOptions.fill!"
+    [tooltip]="chartOptions.tooltip!"
+    [plotOptions]="chartOptions.plotOptions!"
+    [legend]="chartOptions.legend!"
+    [colors]="chartOptions.colors!"
+  ></apx-chart>
+</div>

@@ -1,0 +1,24 @@
+<mat-card [style.backgroundColor]="backgroundColor" style="height: 100%">
+  <mat-card-title>
+    <div class="row" style="padding: 10px">
+      <h5 style="font-size: 1rem !important; margin: 0 0 0 0">{{ title }}</h5>
+      <p style="font-size: 0.75rem !important; color: gray">{{ subtitle }}</p>
+    </div>
+  </mat-card-title>
+  <mat-card-content style="display: grid; text-align: center !important; justify-items: center !important; align-items: center !important; height: 50%">
+    <ng-content style="width: 100%;"></ng-content>
+  </mat-card-content>
+  <mat-card-actions style="justify-content: center; align-items: center">
+    <div class="row" style="padding-bottom: 40px;">
+      <div class="col" style="width: 100%;">
+        <p style="font-size: 0.75rem;">{{ details }}</p>
+      </div>
+      <div class="col" style="width: 100%;">
+        <button mat-stroked-button style="color: black;">{{ button }}</button>
+      </div>
+    </div>
+    <!-- <ng-template [ngIf]=""> -->
+      
+    <!-- </ng-template> -->
+  </mat-card-actions>
+</mat-card>

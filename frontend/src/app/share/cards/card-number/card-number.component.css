@@ -1,0 +1,10 @@
+h1 {
+    margin: 4px 0 0 1px;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.main-card {
+    text-align: center;
+    background-color: white;
+}

@@ -1,0 +1,23 @@
+.card-transit {
+  width: 100%;
+  min-width: 4.375rem;
+}
+
+.card-details {
+  width: 90%;
+  height: 95%;
+}
+
+.card-container-info {
+  margin: 0;
+  padding: 0;
+  font-size: 3.75rem;
+}
+
+.card-detail-price {
+  font-size: 1rem !important;
+}
+
+.card-order-detail {
+  font-size: 1rem !important;
+}

@@ -1,0 +1,22 @@
+<div style="padding: 1rem 1.5rem">
+  <app-orders-section
+    [averageDelivered]="averageDelivered"
+    [breakpoint]="breakpoint"
+    [totalSpend]="report.totalCost"
+    [totalQuantity]="report.totalQuantity"
+    [values]="report.status"
+    [averageDeliveredDays]="report.averageDelivered"
+  />
+  <app-financial-section [breakpoint]="breakpoint" />
+  <app-delivery-section
+    [breakpoint]="breakpoint"
+    [nextDelivered]="report.nextOrderDelivered"
+    [nextPayment]="report.nextOrderPaid"
+    [ordersByYear]="report.ordersByYear"
+  />
+  <app-material-section
+    [breakpoint]="breakpoint"
+    [injuredProducts]="report.injuredProducts!"
+    [productProgress]="report.productProgress!"
+  />
+</div>

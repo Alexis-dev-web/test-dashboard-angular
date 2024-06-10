@@ -1,0 +1,28 @@
+.card-performance {
+  width: 90% !important;
+  margin: 10px 0 0 10px;
+}
+
+.title-performance {
+  font-size: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.subtitle {
+  color: #01a696;
+  font-size: 0.75rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.title-stadistics {
+  color: #94a3b8;
+  font-size: 0.75rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.stadistics {
+  font-size: 1.4rem !important;
+}

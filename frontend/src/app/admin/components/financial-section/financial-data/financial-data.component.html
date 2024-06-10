@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-title class="card-performance">
+    <p class="title-performance">Financial Data</p>
+    <span class="subtitle">Average and total monthly/annual experences</span>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-grid-list cols="6" rowHeight="100px">
+      <mat-card-title>
+        <mat-grid-tile [colspan]="breakpoint == 2 ? 2 : breakpoint == 1 ? 3 : 1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">Current Year</p>
+              <h4 class="stadistics">
+                <strong><li >$14,500.00</li></strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="breakpoint == 2 ? 2 : breakpoint == 1 ? 3 : 1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">Last year</p>
+              <h4 class="stadistics">
+                <strong>$10,500.00</strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="breakpoint == 2 ? 2 : breakpoint == 1 ? 3 : 1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">Growth</p>
+              <h4 class="stadistics">
+                <strong>$4,500.00</strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-card-title>
+    </mat-grid-list>
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series!"
+        [chart]="chartOptions.chart!"
+        [xaxis]="chartOptions.xaxis!"
+        [stroke]="chartOptions.stroke!"
+        [tooltip]="chartOptions.tooltip!"
+        [dataLabels]="chartOptions.dataLabels!"
+        [legend]="chartOptions.legend!"
+        [yaxis]="chartOptions.yaxis!"
+        [grid]="chartOptions.grid!"
+      ></apx-chart>
+    </div>
+  </mat-card-content>
+</mat-card>

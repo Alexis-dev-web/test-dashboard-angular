@@ -1,0 +1,6 @@
+services:
+  angular:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 8090:80

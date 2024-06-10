@@ -1,0 +1,72 @@
+<div>
+  <div class="col" class="margin-section-titles">
+    <h1 class="mat-title-large text-align-left">
+      <strong>Purchase Overview</strong>
+    </h1>
+  </div>
+  <mat-card
+    [class]="
+      breakpoint == 1 ? 'section-performance-mobile' : 'section-performance'
+    "
+  >
+    <mat-card-title class="card-performance">
+      <p class="title-performance">Key performance indicators</p>
+      <span class="subtitle">Last update 25 Jun 2024</span>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-grid-list [cols]="breakpoint == 1 ? 2 : 5" rowHeight="100px">
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">Total anual spend</p>
+              <h4 class="stadistics">
+                <strong>${{ totalSpend }}</strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">Average Delivery Time</p>
+              <h4 class="stadistics">
+                <strong>{{ averageDeliveredDays }} days</strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">Total anual Quantity</p>
+              <h4 class="stadistics">
+                <strong>{{ totalQuantity }} TM</strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="row">
+            <div class="col">
+              <p class="title-stadistics">On-Time Delivery Rate</p>
+              <h4 class="stadistics">
+                <strong>{{ averageDelivered.toPrecision(2) }}%</strong>
+              </h4>
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-grid-list [cols]="breakpoint" rowHeight="90px">
+    @for (item of values; track $index) {
+    <mat-grid-tile colspan="1" rowspan="2">
+      <app-card-number
+        [item]="item"
+        [textColor]="item.color"
+        class="card-dimensions"
+      />
+    </mat-grid-tile>
+    }
+  </mat-grid-list>
+</div>

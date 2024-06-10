@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-title style="padding: 10px 0 0 10px !important">
+    <h5 style="font-size: 1rem">Brown Fused Alumina</h5>
+  </mat-card-title>
+  <mat-card-content style="background-color: white;">
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series!"
+        [chart]="chartOptions.chart!"
+        [plotOptions]="chartOptions.plotOptions!"
+        [legend]="chartOptions.legend!"
+        [fill]="chartOptions.fill!"
+        [labels]="chartOptions.labels!"
+      ></apx-chart>
+    </div>
+    <mat-grid-list cols="3" rowHeight="29px">
+      <mat-grid-tile colspan="1">
+        <p style="font-size: 14px; text-align: right;">Completed:</p>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <p style="font-size: 14px;"><strong>{{ completed }}</strong> TM</p>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" class="justify-content: left !important;">
+        <p style="font-size: 14px;">{{ porcentageAdvance.toPrecision(2) }}%</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider></mat-divider>
+    <mat-grid-list cols="3" rowHeight="29px">
+      <mat-grid-tile colspan="1">
+        <p style="font-size: 14px; text-align: right;">Yearly:</p>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <p style="font-size: 14px;"><strong>{{ adquired }}</strong> TM</p>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <p style="font-size: 14px;">100%</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,59 @@
+<div class="col margin-section-titles">
+  <h1 class="mat-title-large text-align-left">
+    <strong>Delivery metrics</strong>
+  </h1>
+</div>
+<mat-card>
+  <mat-card-content>
+    <mat-grid-list [cols]="breakpoint" rowHeight="400px">
+      <mat-grid-tile colspan="{{ breakpoint < 2 ? 1 : 2 }}" rowspan="1">
+        <app-transit-chart class="card-transit" [years]="ordersByYear" />
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <app-card-details
+          backgroundColor="#e6fefc"
+          class="card-details"
+          title="Next Arrival"
+          subtitle="Days to arrival {{ days }}"
+          details="Port to arrival: {{ nextDelivered.address?.street}}, {{ nextDelivered.address?.country }}"
+          button="View order details"
+        >
+          <div class="row">
+            <div class="col">
+              <h1 class="card-container-info" style="color: #14ad9e">
+                <strong
+                  >{{ day.toString().length == 1 ? "0" + day : day }}-{{
+                    month.toString().length == 1 ? "0" + month : month
+                  }}</strong
+                >
+              </h1>
+              <p style="color: #72d1c9">PO: {{ nextDelivered.number }}</p>
+            </div>
+          </div>
+        </app-card-details>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <app-card-details
+          backgroundColor="#fff7ed"
+          title="Upcoming payment"
+          subtitle="In the next {{ daysNextPayment }} days"
+          class="card-details"
+          details="Payment Deadline: {{ nextPayment.paidDate }}"
+          button="Upload payment"
+        >
+          <div class="row">
+            <div class="col">
+              <h1 class="card-container-info" style="color: #f97316">
+                <span style="font-size: 2rem !important">$</span
+                ><strong>{{ nextPayment.totalPrice }}</strong>
+              </h1>
+              <p card="card-order-detail" style="color: #fbad74">
+                PO: {{ nextPayment.number }}
+              </p>
+            </div>
+          </div>
+        </app-card-details>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>
